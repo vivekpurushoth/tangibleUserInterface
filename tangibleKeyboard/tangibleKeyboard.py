@@ -10,8 +10,6 @@ from Xlib import X, display #To interact with x11 server
 '''
 This function takes a character and generates an interrupt(event) to the kernel.
 '''  
-
-
 def emitCharacter(character):
 	if (character == 'APOS'):
 		os.system("xdotool key apostrophe ")
@@ -21,7 +19,7 @@ def emitCharacter(character):
 #End of emitCharacter
 
 '''
-
+This function sets up all the global variables that will be later used by other modules of the program
 '''
 def setup():
 	global w
@@ -276,6 +274,9 @@ def initialize():
 #End of initialize
 
 
+'''
+This function is used to help the user calibrate the keyboard layout.
+'''
 def calibrate():
 	print "press ESC"
 
@@ -390,6 +391,10 @@ def calibrate():
 	sleep(1)
 #End of calibrate
 
+'''
+This function performs the actual sensing of the keyboard and mouse events.
+It also emits the interrupt to the system
+'''
 def sense():
 	print "Sensing begins"
 	while( 1 ):
@@ -616,6 +621,9 @@ def sense():
 #End of sense
 
 
+'''
+The main function, the first function that will be called
+'''
 def main():
 	setup() #Connect the wiimote to the computer via bluetooth, get the reference of the object, 	
 	initialize() #Initialize all the global variables necessary
@@ -623,5 +631,8 @@ def main():
 	sense() #Start sensing every IR led light that appers in the frame of wiiremote, map the coordinates and generate the event.
 #End of main
 
+'''
+The starting point of the entire program
+'''
 if __name__ == "__main__":
 	main()
