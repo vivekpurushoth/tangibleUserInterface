@@ -5,398 +5,26 @@ import time
 import uinput
 import os
 
+#Creating a socket object of address family AF_INET and type datagram.
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+#Bind the socket to the port 5001
 server_socket.bind(("", 5001))
 
 
-print"UDPServer Waiting for client on port 5000"
+print"UDPServer Waiting for client on port 5001"
 
 def emitCharacter(character):
-	if (character == ''):
-		return
-	elif (character == 'A'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_A, 1)
-		device.emit(uinput.KEY_A, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'B'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_B, 1)
-		device.emit(uinput.KEY_B, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'C'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_C, 1)
-		device.emit(uinput.KEY_C, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'D'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_D, 1)
-		device.emit(uinput.KEY_D, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'E'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_E, 1)
-		device.emit(uinput.KEY_E, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'F'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_F, 1)
-		device.emit(uinput.KEY_F, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'G'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_G, 1)
-		device.emit(uinput.KEY_G, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'H'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_H, 1)
-		device.emit(uinput.KEY_H, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'I'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_I, 1)
-		device.emit(uinput.KEY_I, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'J'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_J, 1)
-		device.emit(uinput.KEY_J, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'K'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_K, 1)
-		device.emit(uinput.KEY_K, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'L'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_L, 1)
-		device.emit(uinput.KEY_L, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'M'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_M, 1)
-		device.emit(uinput.KEY_M, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'N'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_N, 1)
-		device.emit(uinput.KEY_N, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'O'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_O, 1)
-		device.emit(uinput.KEY_O, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'P'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_P, 1)
-		device.emit(uinput.KEY_P, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'Q'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_Q, 1)
-		device.emit(uinput.KEY_Q, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'R'):
-		device.emit(uinput.KEY_CAPSLOCK, 1)
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_R, 1)
-		device.emit(uinput.KEY_R, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'S'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_S, 1)
-		device.emit(uinput.KEY_S, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'T'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_T, 1)
-		device.emit(uinput.KEY_T, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'U'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_U, 1)
-		device.emit(uinput.KEY_U, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'V'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_V, 1)
-		device.emit(uinput.KEY_V, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'W'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_W, 1)
-		device.emit(uinput.KEY_W, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'X'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_X, 1)
-		device.emit(uinput.KEY_X, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'Y'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_Y, 1)
-		device.emit(uinput.KEY_Y, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1)
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'Z'):
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-		device.emit(uinput.KEY_Z, 1)
-		device.emit(uinput.KEY_Z, 0)
-		device.emit(uinput.KEY_CAPSLOCK, 1) 
-		device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif (character == 'a'):
-		device.emit(uinput.KEY_A, 1)
-		device.emit(uinput.KEY_A, 0)
-	elif (character == 'b'):
-		device.emit(uinput.KEY_B, 1)
-		device.emit(uinput.KEY_B, 0)
-	elif (character == 'c'):
-		device.emit(uinput.KEY_C, 1)
-		device.emit(uinput.KEY_C, 0)
-	elif (character == 'd'):
-		device.emit(uinput.KEY_D, 1)
-		device.emit(uinput.KEY_D, 0)
-	elif (character == 'e'):
-		device.emit(uinput.KEY_E, 1)
-		device.emit(uinput.KEY_E, 0)
-	elif (character == 'f'):
-		device.emit(uinput.KEY_F, 1)
-		device.emit(uinput.KEY_F, 0)
-	elif (character == 'g'):
-		device.emit(uinput.KEY_G, 1)
-		device.emit(uinput.KEY_G, 0)
-	elif (character == 'h'):
-		device.emit(uinput.KEY_H, 1)
-		device.emit(uinput.KEY_H, 0)
-	elif (character == 'i'):
-		device.emit(uinput.KEY_I, 1)
-		device.emit(uinput.KEY_I, 0)
-	elif (character == 'j'):
-		device.emit(uinput.KEY_J, 1)
-		device.emit(uinput.KEY_J, 0)
-	elif (character == 'k'):
-		device.emit(uinput.KEY_K, 1)
-		device.emit(uinput.KEY_K, 0)
-	elif (character == 'l'):
-		device.emit(uinput.KEY_L, 1)
-		device.emit(uinput.KEY_L, 0)
-	elif (character == 'm'):
-		device.emit(uinput.KEY_M, 1)
-		device.emit(uinput.KEY_M, 0)
-	elif (character == 'n'):
-		device.emit(uinput.KEY_N, 1)
-		device.emit(uinput.KEY_N, 0)
-	elif (character == 'o'):
-		device.emit(uinput.KEY_O, 1)
-		device.emit(uinput.KEY_O, 0)
-	elif (character == 'p'):
-		device.emit(uinput.KEY_P, 1)
-		device.emit(uinput.KEY_P, 0)
-	elif (character == 'q'):
-		device.emit(uinput.KEY_Q, 1)
-		device.emit(uinput.KEY_Q, 0)
-	elif (character == 'r'):
-		device.emit(uinput.KEY_R, 1)
-		device.emit(uinput.KEY_R, 0)
-	elif (character == 's'):
-		device.emit(uinput.KEY_S, 1)
-		device.emit(uinput.KEY_S, 0)
-	elif (character == 't'):
-		device.emit(uinput.KEY_T, 1)
-		device.emit(uinput.KEY_T, 0)
-	elif (character == 'u'):
-		device.emit(uinput.KEY_U, 1)
-		device.emit(uinput.KEY_U, 0)
-	elif (character == 'v'):
-		device.emit(uinput.KEY_V, 1)
-		device.emit(uinput.KEY_V, 0)
-	elif (character == 'w'):
-		device.emit(uinput.KEY_W, 1)
-		device.emit(uinput.KEY_W, 0)
-	elif (character == 'x'):
-		device.emit(uinput.KEY_X, 1)
-		device.emit(uinput.KEY_X, 0)
-	elif (character == 'y'):
-		device.emit(uinput.KEY_Y, 1)
-		device.emit(uinput.KEY_Y, 0)
-	elif (character == 'z'):
-		device.emit(uinput.KEY_Z, 1)
-		device.emit(uinput.KEY_Z, 0)
+	global device
+	global dictionaryEvents
+	device.emit(dictionaryEvents[character],1)
+	device.emit(dictionaryEvents[character],0)
 
 
-	elif character == '1':
-		device.emit(uinput.KEY_1, 1) 
-		device.emit(uinput.KEY_1, 0)
-	elif character == '2':
-	     device.emit(uinput.KEY_2, 1) 
-	     device.emit(uinput.KEY_2, 0)
-	elif character == '3':
-	     device.emit(uinput.KEY_3, 1) 
-	     device.emit(uinput.KEY_3, 0)
-	elif character == '4':
-	     device.emit(uinput.KEY_4, 1) 
-	     device.emit(uinput.KEY_4, 0)
-	elif character == '5':
-	     device.emit(uinput.KEY_5, 1) 
-	     device.emit(uinput.KEY_5, 0)
-	elif character == '6':
-	     device.emit(uinput.KEY_6, 1) 
-	     device.emit(uinput.KEY_6, 0)
-	elif character == '7':
-	     device.emit(uinput.KEY_7, 1) 
-	     device.emit(uinput.KEY_7, 0)
-	elif character == '8':
-	     device.emit(uinput.KEY_8, 1) 
-	     device.emit(uinput.KEY_8, 0)
-	elif character == '9':
-	     device.emit(uinput.KEY_9, 1) 
-	     device.emit(uinput.KEY_9, 0)
-	elif character == '0':
-	     device.emit(uinput.KEY_0, 1) 
-	     device.emit(uinput.KEY_0, 0) 
-	elif character == '-':
-	     device.emit(uinput.KEY_MINUS, 1) 
-	     device.emit(uinput.KEY_MINUS, 0)     
-	elif character == '=':
-	     device.emit(uinput.KEY_EQUAL, 1) 
-	     device.emit(uinput.KEY_EQUAL, 0)
-	elif character == 'BACKSPACE':
-	     device.emit(uinput.KEY_BACKSPACE, 1) 
-	     device.emit(uinput.KEY_BACKSPACE, 0)
-	elif character == 'TAB':
-	     device.emit(uinput.KEY_TAB, 1) 
-	     device.emit(uinput.KEY_TAB, 0)
-	elif character == 'LEFTBRACE':
-	     device.emit(uinput.KEY_LEFTBRACE, 1) 
-	     device.emit(uinput.KEY_LEFTBRACE, 0)    
-	elif character == 'RIGHTBRACE':
-	     device.emit(uinput.KEY_RIGHTBRACE, 1) 
-	     device.emit(uinput.KEY_RIGHTBRACE, 0)
-	elif character == 'ENTER':
-	     device.emit(uinput.KEY_ENTER, 1) 
-	     device.emit(uinput.KEY_ENTER, 0)     
-	elif character == ',':
-	     device.emit(uinput.KEY_COMMA, 1) 
-	     device.emit(uinput.KEY_COMMA, 0)     
-	elif character == '.':
-	     device.emit(uinput.KEY_DOT, 1) 
-	     device.emit(uinput.KEY_DOT, 0)     
-	elif character == '/':
-	     device.emit(uinput.KEY_SLASH, 1) 
-	     device.emit(uinput.KEY_SLASH, 0)
-	elif character == 'RIGHTSHIFT':
-	     device.emit(uinput.KEY_RIGHTSHIFT, 1) 
-	     device.emit(uinput.KEY_RIGHTSHIFT, 0)
-	elif character == 'LEFTALT':
-	     device.emit(uinput.KEY_LEFTALT, 1) 
-	     device.emit(uinput.KEY_LEFTALT, 0)
-	elif character == 'SPACE':
-	     device.emit(uinput.KEY_SPACE, 1) 
-	     device.emit(uinput.KEY_SPACE, 0)
-	elif character == 'CAPSLOCK':
-	     device.emit(uinput.KEY_CAPSLOCK, 1) 
-	     device.emit(uinput.KEY_CAPSLOCK, 0)
-	elif character == 'LEFTCTRL':
-	     device.emit(uinput.KEY_LEFTCTRL, 1)
-	     device.emit(uinput.KEY_LEFTCTRL,0)
-	     print "ctrl clicked" 
-	     #device.emit(uinput.KEY_LEFTCTRL, 0)
-	     c=get_additional_key()
-	     if c == 'V':
-	     	os.system("xdotool key Ctrl+V")	     
-	     sleep(0.1)	    
-	if character == 'LEFTMETA':
-	     device.emit(uinput.KEY_LEFTMETA, 1) 
-	     device.emit(uinput.KEY_LEFTMETA, 0)  
-	if character == 'RIGHTALT':
-	     device.emit(uinput.KEY_RIGHTALT, 1) 
-	     device.emit(uinput.KEY_RIGHTALT, 0) 
-	if character == 'RIGHTCTRL':
-	     device.emit(uinput.KEY_RIGHTCTRL, 1) 
-	     device.emit(uinput.KEY_RIGHTCTRL, 0) 
-	if character == 'LEFT':		
-	     device.emit(uinput.KEY_LEFT, 1)
-	     print "left arrow" 
-	     device.emit(uinput.KEY_LEFT, 0)
-	if character == 'DOWN':
-	     #sleep(1)
-	     device.emit(uinput.KEY_DOWN, 1)
-	     print "DOWN arrow" 
-	     device.emit(uinput.KEY_DOWN, 0) 
-	if character == 'RIGHT':
-	     device.emit(uinput.KEY_RIGHT, 1)
-	     print "right arrow" 
-	     device.emit(uinput.KEY_RIGHT, 0)  
-	if character == 'COMMA':
-		 device.emit(uinput.KEY_COMMA,1)
-		 device.emit(uinput.KEY_COMMA,0)
-	if character == 'DOT':
-		 device.emit(uinput.KEY_DOT,1)
-		 device.emit(uinput.KEY_DOT,0)
-	if character == 'DEL':
-		 device.emit(uinput.KEY_DELETE,1)
-		 device.emit(uinput.KEY_DELETE,0)
-	if (character == 'UP'):
-		device.emit(uinput.KEY_UP, 1)
-		device.emit(uinput.KEY_UP, 0)
-
-
-
-
-
-events = (
+def initialize():
+	global events
+	global device
+	global dictionaryEvents
+	events = (
     uinput.REL_X,
     uinput.REL_Y,
     uinput.BTN_LEFT,
@@ -507,44 +135,125 @@ events = (
  uinput.ABS_Y,
  uinput.KEY_SEMICOLON,
 )
+	device = uinput.Device(events)
+	dictionaryEvents = {}
+	dictionaryEvents['A'] = uinput.KEY_A
+	dictionaryEvents['B'] = uinput.KEY_B
+	dictionaryEvents['C'] = uinput.KEY_C
+	dictionaryEvents['D'] = uinput.KEY_D
+	dictionaryEvents['E'] = uinput.KEY_E
+	dictionaryEvents['F'] = uinput.KEY_F
+	dictionaryEvents['G'] = uinput.KEY_G
+	dictionaryEvents['H'] = uinput.KEY_H
+	dictionaryEvents['I'] = uinput.KEY_I
+	dictionaryEvents['J'] = uinput.KEY_J
+	dictionaryEvents['K'] = uinput.KEY_K
+	dictionaryEvents['L'] = uinput.KEY_L
+	dictionaryEvents['M'] = uinput.KEY_M
+	dictionaryEvents['N'] = uinput.KEY_N
+	dictionaryEvents['O'] = uinput.KEY_O
+	dictionaryEvents['P'] = uinput.KEY_P
+	dictionaryEvents['Q'] = uinput.KEY_Q
+	dictionaryEvents['R'] = uinput.KEY_R
+	dictionaryEvents['S'] = uinput.KEY_S
+	dictionaryEvents['T'] = uinput.KEY_T
+	dictionaryEvents['U'] = uinput.KEY_U
+	dictionaryEvents['V'] = uinput.KEY_V
+	dictionaryEvents['W'] = uinput.KEY_W
+	dictionaryEvents['X'] = uinput.KEY_X
+	dictionaryEvents['Y'] = uinput.KEY_Y
+	dictionaryEvents['Z'] = uinput.KEY_Z
+	dictionaryEvents['1'] = uinput.KEY_1
+	dictionaryEvents['2'] = uinput.KEY_2
+	dictionaryEvents['3'] = uinput.KEY_3
+	dictionaryEvents['4'] = uinput.KEY_4
+	dictionaryEvents['5'] = uinput.KEY_5
+	dictionaryEvents['6'] = uinput.KEY_6
+	dictionaryEvents['7'] = uinput.KEY_7
+	dictionaryEvents['8'] = uinput.KEY_8
+	dictionaryEvents['9'] = uinput.KEY_9
+	dictionaryEvents['0'] = uinput.KEY_0
+	dictionaryEvents['MINUS'] = uinput.KEY_MINUS
+	dictionaryEvents['EQUAL'] = uinput.KEY_EQUAL
+	dictionaryEvents['BACKSPACE'] = uinput.KEY_BACKSPACE
+	dictionaryEvents['TAB'] = uinput.KEY_TAB
+	dictionaryEvents['LEFTBRACE'] = uinput.KEY_LEFTBRACE
+	dictionaryEvents['RIGHTBRACE'] = uinput.KEY_RIGHTBRACE
+	dictionaryEvents['ENTER'] = uinput.KEY_ENTER
+	dictionaryEvents['COMMA'] = uinput.KEY_COMMA
+	dictionaryEvents['SLASH'] = uinput.KEY_SLASH
+	dictionaryEvents['RIGHTSHIFT'] = uinput.KEY_RIGHTSHIFT
+	dictionaryEvents['LEFTALT'] = uinput.KEY_LEFTALT
+	dictionaryEvents['SPACE'] = uinput.KEY_SPACE
+	dictionaryEvents['CAPSLOCK'] = uinput.KEY_CAPSLOCK
+	dictionaryEvents['LEFTCTRL'] = uinput.KEY_LEFTCTRL
+	dictionaryEvents['LEFTMETA'] = uinput.KEY_LEFTMETA
+	dictionaryEvents['RIGHTALT'] = uinput.KEY_RIGHTALT
+	dictionaryEvents['RIGHTCTRL'] = uinput.KEY_RIGHTCTRL
+	dictionaryEvents['LEFT'] = uinput.KEY_LEFT
+	dictionaryEvents['DOWN'] = uinput.KEY_DOWN
+	dictionaryEvents['RIGHT'] = uinput.KEY_RIGHT
+	dictionaryEvents['DOT'] = uinput.KEY_DOT
+	dictionaryEvents['DEL'] = uinput.KEY_DELETE
+	dictionaryEvents['UP'] = uinput.KEY_UP
+	dictionaryEvents['F1'] = uinput.KEY_F1
+	dictionaryEvents['F2'] = uinput.KEY_F2
+	dictionaryEvents['F3'] = uinput.KEY_F3
+	dictionaryEvents['F4'] = uinput.KEY_F4
+	dictionaryEvents['F5'] = uinput.KEY_F5
+	dictionaryEvents['F6'] = uinput.KEY_F6
+	dictionaryEvents['F7'] = uinput.KEY_F7
+	dictionaryEvents['F8'] = uinput.KEY_F8
+	dictionaryEvents['F9'] = uinput.KEY_F9
+	dictionaryEvents['F10'] = uinput.KEY_F10
+	dictionaryEvents['F11'] = uinput.KEY_F11
+	dictionaryEvents['F12'] = uinput.KEY_F12
+	dictionaryEvents['ESC'] = uinput.KEY_ESC
+	dictionaryEvents['SEMI'] = uinput.KEY_SEMICOLON
+	dictionaryEvents['ENTER'] = uinput.KEY_ENTER
     
-#For mouse clicks
-    #device.emit(uinput.BTN_LEFT,1)
-    #device.emit(uinput.BTN_LEFT,0)
-
-device = uinput.Device(events)
-    
 
 
-
-while 1:
-	data, address = server_socket.recvfrom(256)
-	#print "( " ,address[0], " " , address[1] , " ) said : ", data
-	data=string.split(data,"=")
-	if data[0]=="M":
-		print data[1]
-		print data[2]
-		device.emit(uinput.REL_X, int(data[1]), syn=False)
-		device.emit(uinput.REL_Y, int(data[2]))
-	elif data[0]=="C":
-		print "clicked"
-		device.emit(uinput.BTN_LEFT,1)
-		device.emit(uinput.BTN_LEFT,0)
-	elif data[0]=="K":
-		
-		if data[1]==str(1):
-			print data[2],type(data[2])
-			if data[2]==" ":
-				emitCharacter("SPACE")
-			elif data[2]=="\n":
-				emitCharacter("ENTER")
+def sense():
+	while True:
+		#Collect the data obtained from the udp client. Setting the maximum buffer size as 256
+		data, address = server_socket.recvfrom(256)
+		#Interpreting the data obtained from the client
+		data=string.split(data,"=")
+		if data[0]=="M": #mouse move event
+			print data[1]
+			print data[2]
+			device.emit(uinput.REL_X, int(data[1]), syn=False)
+			device.emit(uinput.REL_Y, int(data[2]))
+		elif data[0]=="C": #mouse left click event
+			print "clicked"
+			device.emit(uinput.BTN_LEFT,1)
+			device.emit(uinput.BTN_LEFT,0)
+		elif data[0]=="R": #mouse right click event
+			print "Right click"
+			device.emit(uinput.BTN_RIGHT,1)
+			device.emit(uinput.BTN_RIGHT,0)
+		elif data[0]=="K": #keyboard keypress event
+			if data[1]==str(1): #Comparing if the parameter is string 1
+				if data[2]==" ":
+					emitCharacter("SPACE") #Emitting space
+				elif data[2]=="\n":
+					emitCharacter("ENTER") #Emitting enter
+				else:
+					emitCharacter(data[2]) #Emitting normal characters
 			else:
-				emitCharacter(data[2])
-			
-		else:
-			os.system("xdotool key BackSpace")
+				os.system("xdotool key BackSpace") #Generating backspace by using xdoltool
 
-	elif data[0]=="R":
-		print "Right click"
-		device.emit(uinput.BTN_RIGHT,1)
-		device.emit(uinput.BTN_RIGHT,0)
+'''
+The main function, the first function that will be called
+'''
+def main():
+	initialize() #Initialize all the global variables necessary
+	sense() #Start detecting the different events obtained to the server
+#End of main
+
+'''
+The starting point of the entire program
+'''
+if __name__ == "__main__":
+	main()
